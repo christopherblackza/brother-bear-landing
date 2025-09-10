@@ -1,0 +1,47 @@
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">
+        <span class="badge-text">What We Do</span>
+      </div>
+      <h2 class="section-title">
+        <span class="title-gradient">Professional Services</span>
+      </h2>
+      <p class="section-description">
+        Comprehensive software development solutions designed to transform your business
+      </p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of displayServices; let i = index" 
+           [attr.data-index]="i">
+        <div class="card-header">
+          <div class="service-icon">
+            <i [class]="service.icon"></i>
+          </div>
+          <h3 class="service-title">{{ service.title }}</h3>
+        </div>
+        
+        <div class="card-content">
+          <p class="service-description">{{ service.description }}</p>
+          
+          <ul class="service-features" *ngIf="service.features">
+            <li *ngFor="let feature of service.features" class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>{{ feature }}</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card-footer">
+          <button class="service-btn">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        
+        <div class="card-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>

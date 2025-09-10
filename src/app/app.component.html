@@ -1,0 +1,91 @@
+<!-- Modern Glass Navigation -->
+<nav class="modern-nav">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <span class="brand-text">Brother Bear</span>
+      <span class="brand-accent">Software</span>
+    </div>
+    <div class="nav-menu" id="navMenu">
+      <a class="nav-link" (click)="scrollToSection('hero')">Home</a>
+      <a class="nav-link" (click)="scrollToSection('about')">About</a>
+      <a class="nav-link" (click)="scrollToSection('services')">Services</a>
+      <a class="nav-link" (click)="scrollToSection('portfolio')">Portfolio</a>
+      <a class="nav-link" (click)="scrollToSection('contact')">Contact</a>
+    </div>
+    <button class="nav-toggle" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Premium Hero Section -->
+<section id="hero" class="hero-modern">
+  <div class="hero-background">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">
+        <span class="title-main">Brother Bear</span>
+        <span class="title-accent">Software</span>
+      </h1>
+      <p class="hero-subtitle">
+        Professional software development and consulting services
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary-modern" (click)="scrollToSection('services')">
+          <span>Our Services</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <button class="btn-secondary-modern" (click)="scrollToSection('contact')">
+          <span>Get In Touch</span>
+        </button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-card">
+        <i class="fas fa-laptop-code"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Professional About Component -->
+<app-about></app-about>
+
+<!-- Professional Services Component -->
+<app-services></app-services>
+
+<!-- Modern Portfolio Section -->
+<section id="portfolio" class="section-modern portfolio-section">
+  <div class="container-modern">
+    <div class="section-header">
+      <h2 class="section-title-modern">Portfolio</h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">Showcasing our latest projects and innovations</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card-modern" *ngFor="let project of projects">
+        <div class="portfolio-image">
+          <img [src]="project.image" [alt]="project.title">
+          <div class="portfolio-overlay">
+            <div class="portfolio-content">
+              <h5 class="portfolio-title">{{ project.title }}</h5>
+              <p class="portfolio-description">{{ project.description }}</p>
+              <span class="portfolio-status">{{ project.status }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reusable Contact Component -->
+<app-contact></app-contact>
+
+<!-- Professional Footer Component -->
+<app-footer></app-footer>

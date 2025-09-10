@@ -1,0 +1,135 @@
+// Section spacing and utilities
+section {
+  scroll-margin-top: 80px;
+}
+
+// Section styling with improved contrast
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color) 0%, var(--primary-color) 100%);
+  margin: 0 auto 2rem;
+  border-radius: 2px;
+}
+
+// Background sections with subtle green tints
+.bg-light {
+  background-color: var(--background-light) !important;
+}
+
+// Additional high contrast utilities
+.lead {
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.text-muted {
+  color: var(--secondary-color) !important;
+}
+
+// Smooth scrolling behavior
+html {
+  scroll-behavior: smooth;
+}
+
+// Custom scrollbar with green theme
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+// Button improvements
+.btn {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+// Button styles (legacy Tailwind-like classes)
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  &:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #2563eb;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: 2px solid #2563eb;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: #f8fafc;
+    transform: scale(1.05);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: 2.5rem;
+  }
+  
+  .display-5 {
+    font-size: 2rem;
+  }
+  
+  .service-card,
+  .project-card,
+  .portfolio-card {
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .hero-section {
+    text-align: center;
+    
+    .hero-icon {
+      font-size: 8rem;
+      margin-top: 2rem;
+    }
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .experience-badges {
+    text-align: center;
+  }
+}

@@ -1,0 +1,149 @@
+<section id="contact" class="section-modern contact-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title-modern light">Get In Touch</h2>
+      <div class="section-line light"></div>
+      <p class="section-subtitle light">Ready to start your next project? Let's discuss how we can help.</p>
+    </div>
+    
+    <div class="contact-content">
+      <div class="contact-form-wrapper">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form-modern">
+          <!-- First Row: Name and Email -->
+          <div class="form-row">
+            <div class="form-field">
+              <p-floatlabel>
+                <input 
+                  pInputText 
+                  id="visitor_name"
+                  formControlName="visitor_name"
+                  class="modern-input"
+                  [class.p-invalid]="isFieldInvalid('visitor_name')" />
+                <label for="visitor_name">Full Name *</label>
+              </p-floatlabel>
+              <small 
+                *ngIf="getFieldError('visitor_name')"
+                class="p-error error-message">
+                {{ getFieldError('visitor_name') }}
+              </small>
+            </div>
+
+            <div class="form-field">
+              <p-floatlabel>
+                <input 
+                  pInputText 
+                  id="visitor_email"
+                  type="email"
+                  formControlName="visitor_email"
+                  class="modern-input"
+                  [class.p-invalid]="isFieldInvalid('visitor_email')" />
+                <label for="visitor_email">Email Address *</label>
+              </p-floatlabel>
+              <small 
+                *ngIf="getFieldError('visitor_email')"
+                class="p-error error-message">
+                {{ getFieldError('visitor_email') }}
+              </small>
+            </div>
+          </div>
+
+          <!-- Second Row: Phone and Budget -->
+          <div class="form-row">
+            <div class="form-field">
+              <p-floatlabel>
+                <input 
+                  pInputText 
+                  id="phonenumber"
+                  type="tel"
+                  formControlName="phonenumber"
+                  class="modern-input"
+                  [class.p-invalid]="isFieldInvalid('phonenumber')" />
+                <label for="phonenumber">Phone Number</label>
+              </p-floatlabel>
+              <small 
+                *ngIf="getFieldError('phonenumber')"
+                class="p-error error-message">
+                {{ getFieldError('phonenumber') }}
+              </small>
+            </div>
+
+            <p-floatlabel class="w-full md:w-56" variant="in" >
+                <p-select  formControlName="budget"  [options]="budgetOptions" class="modern-select" variant="filled" />
+                <!-- <label for="in_label">Budget</label> -->
+            </p-floatlabel>
+
+          </div>
+
+          <!-- Third Row: Subject (Full Width) -->
+          <div class="form-row">
+            <div class="form-field full-width">
+              <p-floatlabel>
+                <input 
+                  pInputText 
+                  id="subject"
+                  formControlName="subject"
+                  class="modern-input"
+                  [class.p-invalid]="isFieldInvalid('subject')" />
+                <label for="subject">Subject *</label>
+              </p-floatlabel>
+              <small 
+                *ngIf="getFieldError('subject')"
+                class="p-error error-message">
+                {{ getFieldError('subject') }}
+              </small>
+            </div>
+          </div>
+
+          <!-- Fourth Row: Message (Full Width) -->
+          <div class="form-row">
+            <div class="form-field full-width message-field">
+              <p-floatlabel>
+                <textarea 
+                  pTextarea 
+                  id="message"
+                  formControlName="message"
+                  rows="6"
+                  class="modern-textarea"
+                  [class.p-invalid]="isFieldInvalid('message')">
+                </textarea>
+                <label for="message">Your Message *</label>
+              </p-floatlabel>
+              <small 
+                *ngIf="getFieldError('message')"
+                class="p-error error-message">
+                {{ getFieldError('message') }}
+              </small>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-actions">
+            <p-button 
+              type="submit"
+              [disabled]="isSubmitting"
+              [loading]="isSubmitting"
+              label="Send Message"
+              icon="pi pi-send"
+              class="submit-button"
+              size="large">
+            </p-button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Contact Info -->
+    <div class="contact-info-section">
+      <div class="contact-info-card">
+        <div class="contact-info-content">
+          <h3 class="contact-info-title">Prefer Direct Contact?</h3>
+          <p class="contact-info-text">Reach out to us directly for immediate assistance</p>
+          <a href="mailto:christopher.black.sa@gmail.com" class="contact-email-link">
+            <i class="pi pi-envelope"></i>
+            christopher.black.sa&#64;gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,83 @@
+<footer class="modern-footer">
+  <div class="footer-container">
+    <!-- Main Footer Content -->
+    <div class="footer-main">
+      <!-- Brand Section -->
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <span class="brand-text">Brother Bear</span>
+          <span class="brand-accent">Software</span>
+        </div>
+        <p class="brand-description">
+          Professional software development and consulting services. 
+          Transforming ideas into powerful digital solutions.
+        </p>
+        <div class="social-links">
+          <a 
+            *ngFor="let social of socialLinks" 
+            [href]="social.url" 
+            [title]="social.name"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i [class]="social.icon"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="link-list">
+          <li *ngFor="let link of quickLinks">
+            <a (click)="scrollToSection(link.href)" class="footer-link">
+              {{ link.name }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Services -->
+      <div class="footer-services">
+        <h4 class="footer-title">Services</h4>
+        <ul class="link-list">
+          <li><span class="service-item">Web Development</span></li>
+          <li><span class="service-item">Custom Software</span></li>
+          <li><span class="service-item">API Development</span></li>
+          <li><span class="service-item">Technical Consulting</span></li>
+        </ul>
+      </div>
+      
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h4 class="footer-title">Get In Touch</h4>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:christopher.black.sa@gmail.com" class="contact-link">
+            christopher.black.sa&#64;gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          © {{ currentYear }} Brother Bear Software. All rights reserved.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#" class="bottom-link">Privacy Policy</a>
+          <a href="#" class="bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Background Elements -->
+  <div class="footer-bg-elements">
+    <div class="bg-circle bg-circle-1"></div>
+    <div class="bg-circle bg-circle-2"></div>
+  </div>
+</footer>

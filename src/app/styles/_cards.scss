@@ -1,0 +1,63 @@
+// Service cards with green theme
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(16, 185, 129, 0.1);
+  background-color: white;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(6, 95, 70, 0.15) !important;
+    border-color: var(--accent-color);
+  }
+  
+  .service-icon {
+    i {
+      font-size: 3rem;
+      color: var(--primary-color);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .card-title {
+    color: var(--dark-color);
+    font-weight: 700;
+  }
+  
+  .card-text {
+    color: var(--secondary-color);
+    font-weight: 500;
+  }
+}
+
+// Portfolio cards with green theme
+.portfolio-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(16, 185, 129, 0.1);
+  background-color: white;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(6, 95, 70, 0.15) !important;
+    border-color: var(--accent-color);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-title {
+    color: var(--dark-color);
+    font-weight: 700;
+  }
+  
+  .card-text {
+    color: var(--secondary-color);
+    font-weight: 500;
+  }
+}
+
+// Project card (legacy support)
+.project-card {
+  @extend .portfolio-card;
+}

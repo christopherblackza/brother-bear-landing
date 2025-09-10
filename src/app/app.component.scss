@@ -1,0 +1,14 @@
+// Import all component styles using modern @use syntax
+@use 'styles/animations';
+@use 'styles/hero-section';
+@use 'styles/navigation';
+@use 'styles/cards';
+@use 'styles/forms';
+@use 'styles/footer';
+@use 'styles/utilities';
+
+// Main component styles (if any specific to app component)
+:host {
+  display: block;
+  
+}
