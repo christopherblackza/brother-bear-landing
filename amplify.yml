@@ -10,7 +10,9 @@ frontend:
   artifacts:
     baseDirectory: dist/brother-bear-landing
     files:
-      - '**/*'
+      - 'browser/**/*'
+      - 'server/**/*'
+      - 'prerendered-routes.json'
   cache:
     paths:
       - node_modules/**/*
