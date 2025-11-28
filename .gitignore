@@ -47,3 +47,8 @@ Thumbs.db
 .env.*
 !.env.example
 /www
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
