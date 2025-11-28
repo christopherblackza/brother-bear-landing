@@ -6,7 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - npm run build:ssg
+        - npm run build
   artifacts:
     baseDirectory: dist/brother-bear-landing/browser
     files:
