@@ -1,0 +1,23 @@
+<section id="portfolio" class="section-modern portfolio-section">
+  <div class="container-modern">
+    <div class="section-header">
+      <h2 class="section-title-modern">Portfolio</h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">Showcasing our latest projects and innovations</p>
+    </div>
+    <div class="portfolio-grid">
+      <a [href]="project.link" target="_blank" rel="noopener noreferrer" class="portfolio-card-modern" *ngFor="let project of projects">
+        <div class="portfolio-image">
+          <img [src]="project.image" [alt]="project.title">
+          <div class="portfolio-overlay">
+            <div class="portfolio-content">
+              <h5 class="portfolio-title">{{ project.title }}</h5>
+              <p class="portfolio-description">{{ project.description }}</p>
+              <span class="portfolio-status">{{ project.status }}</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

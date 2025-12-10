@@ -4,11 +4,12 @@ import { ServicesComponent } from './components/services/services.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, ServicesComponent, FooterComponent, AboutComponent, ContactComponent],
+  imports: [CommonModule, ServicesComponent, FooterComponent, AboutComponent, ContactComponent, PortfolioComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -29,27 +30,6 @@ export class AppComponent {
     { name: 'Node.js', percentage: 70 },
     { name: 'MongoDB', percentage: 70 },
     { name: 'MySQL', percentage: 70 }
-  ];
-
-  projects = [
-    {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with Angular frontend and Node.js backend.',
-      status: 'Coming Soon',
-      image: 'https://via.placeholder.com/400x250/1e40af/ffffff?text=E-Commerce+Platform'
-    },
-    {
-      title: 'Mobile App Development',
-      description: 'Cross-platform mobile application built with Ionic and Angular.',
-      status: 'Coming Soon',
-      image: 'https://via.placeholder.com/400x250/64748b/ffffff?text=Mobile+App'
-    },
-    {
-      title: 'API Management System',
-      description: 'Comprehensive API management and monitoring dashboard.',
-      status: 'Coming Soon',
-      image: 'https://via.placeholder.com/400x250/f97316/ffffff?text=API+System'
-    }
   ];
 
   toggleMenu() {
